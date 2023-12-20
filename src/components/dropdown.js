@@ -1,9 +1,6 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 
-import * as React from 'react';
-
-import './App.css';
 
 const App = () => {
   const [open, setOpen] = React.useState(false);
