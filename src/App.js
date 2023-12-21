@@ -7,7 +7,7 @@ import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';
 import AllocationForm from './components/AllocationForm';
 import RemainingBudget from './components/Remaining';
-import dropdown from './components/dropdown';
+import Dropdown from './components/dropdown';
 
 const App = () => {
     return (
