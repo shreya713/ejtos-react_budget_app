@@ -1,30 +1,43 @@
-import React, { useContext } from 'react';
-import { AppContext } from '../context/AppContext';
+import * as React from 'react';
 
+const Dropdown = () => {
 
-const App = () => {
-  const [open, setOpen] = React.useState(false);
+ const [value, setValue] = React.useState();
 
-  const handleOpen = () => {
-    setOpen(!open);
-  };
+ const handleChange = (event) => {
 
-  return (
-    <div className="dropdown">
-      <button onClick={handleOpen}>Dropdown</button>
-      {open ? (
-        <ul className="menu">
-          <li className="menu-item">
-            <button>Menu 1</button>
-          </li>
-          <li className="menu-item">
-            <button>Menu 2</button>
-          </li>
-        </ul>
-      ) : null}
-      {open ? <div>Is Open</div> : <div>Is Closed</div>}
-    </div>
-  );
+   setValue(event.target.value);
+
+ };
+
+ return (
+
+   <div>
+
+     <label>
+
+       currency
+
+       <select value={value} onChange={handleChange}>
+
+         <option value="dollar">$ Dollar</option>
+
+         <option value="pound">£ pound </option>
+
+         <option value="euro"> € Euro</option>
+
+         <option value="ruppee">₹ Rupee</option>
+
+       </select>
+
+     </label>
+
+     <p> {value}</p>
+
+   </div>
+
+ );
+
 };
 
-export default dropdown;
+export default Dropdown;
