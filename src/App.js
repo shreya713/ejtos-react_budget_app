@@ -1,4 +1,5 @@
 import React from 'react';
+import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { AppProvider } from './context/AppContext';
@@ -7,9 +8,9 @@ import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';
 import AllocationForm from './components/AllocationForm';
 import RemainingBudget from './components/Remaining';
-import Dropdown from './components/dropdown';
+import Dropdown from './components/Dropdown';
 
-const App = () => {
+function App() {
     return (
         <AppProvider>
             <div className='container'>
@@ -24,8 +25,8 @@ const App = () => {
                     <div className='col-sm'>
                         <ExpenseTotal />
                     </div>
-                   <div className='col-sm'>
-                      <dropdown />
+                    <div className='col-sm'>
+                        <Dropdown />
                     </div>
                 </div>
                 <h3 className='mt-3'>Allocation</h3>
@@ -37,12 +38,12 @@ const App = () => {
                 <h3 className='mt-3'>Change allocation</h3>
                 <div className='row mt-3'>
                     <div className='col-sm'>
-                        <AllocationForm/>
+                        <AllocationForm />
                     </div>
                 </div>
             </div>
         </AppProvider>
     );
-};
+}
 
 export default App;
